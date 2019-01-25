@@ -22,4 +22,7 @@ data = data.dropna()
 after_rows = data.shape[0]
 print(after_rows)
 
+############## data is cleaned now, check the columns with high humidity
+clean_data = data.copy()
+
 
