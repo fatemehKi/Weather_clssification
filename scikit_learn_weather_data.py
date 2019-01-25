@@ -44,3 +44,8 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random
 #############decision tree classifier for ML
 humidity_classifier = DecisionTreeClassifier(max_leaf_nodes=10, random_state=0)
 humidity_classifier.fit(X_train, y_train)
+
+type(humidity_classifier)
+
+############# predicting the result
+predictions = humidity_classifier.predict(X_test)
