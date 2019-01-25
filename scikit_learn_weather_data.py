@@ -22,7 +22,9 @@ data = data.dropna()
 after_rows = data.shape[0]
 print(after_rows)
 
-############## data is cleaned now, check the columns with high humidity
+############## data is cleaned now, check the columns with high humidity and create a new column for it
 clean_data = data.copy()
+#multiply by one to turn boolean to digit
+clean_data['high_humidity_label'] = (clean_data['relative_humidity_3pm']>24.99)*1
 
 
