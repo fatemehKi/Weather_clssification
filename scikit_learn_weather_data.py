@@ -33,5 +33,11 @@ y=clean_data['high_humidity_label'].copy()
 morning_features = ['air_pressure_9am','air_temp_9am','avg_wind_direction_9am','avg_wind_speed_9am',
         'max_wind_direction_9am','max_wind_speed_9am','rain_accumulation_9am',
         'rain_duration_9am']
+#am data frame
+X = clean_data[morning_features].copy()
+
+#In the **training phase**, the learning algorithm uses the training data to adjust the model’s parameters to minimize errors.  
+#At the end of the training phase, you get the trained model. 33% re kept for the final test
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=324)
 
 
