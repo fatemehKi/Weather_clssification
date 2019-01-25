@@ -8,10 +8,10 @@ data = pd.read_csv('./daily_weather.csv')
 # looking at the data frame
 data
 
-#cleaning the data (there are some null values and also removing the number column
+##############cleaning the data (there are some null values and also removing the number column
 del data['number']
 
-########Now let's drop null values using the *pandas dropna* function.
+##Now let's drop null values using the *pandas dropna* function.
 #check if it does have a null rows
 data[data.isnull().any(axis=1)]
 #storing data before delet and null
