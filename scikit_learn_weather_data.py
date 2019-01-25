@@ -26,5 +26,12 @@ print(after_rows)
 clean_data = data.copy()
 #multiply by one to turn boolean to digit
 clean_data['high_humidity_label'] = (clean_data['relative_humidity_3pm']>24.99)*1
+y=clean_data['high_humidity_label'].copy()
+
+#Use 9am Sensor Signals as Features to Predict Humidity at 3pm;
+#the purpose is to create a model that can predict humidity at 3pm based on the weather at 9am
+morning_features = ['air_pressure_9am','air_temp_9am','avg_wind_direction_9am','avg_wind_speed_9am',
+        'max_wind_direction_9am','max_wind_speed_9am','rain_accumulation_9am',
+        'rain_duration_9am']
 
 
