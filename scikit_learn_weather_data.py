@@ -49,3 +49,5 @@ type(humidity_classifier)
 
 ############# predicting the result
 predictions = humidity_classifier.predict(X_test)
+
+
