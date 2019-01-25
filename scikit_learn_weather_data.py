@@ -36,8 +36,11 @@ morning_features = ['air_pressure_9am','air_temp_9am','avg_wind_direction_9am','
 #am data frame
 X = clean_data[morning_features].copy()
 
+#############seperating test and training data
 #In the **training phase**, the learning algorithm uses the training data to adjust the model’s parameters to minimize errors.  
 #At the end of the training phase, you get the trained model. 33% re kept for the final test
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.33, random_state=324)
 
-
+#############decision tree classifier for ML
+humidity_classifier = DecisionTreeClassifier(max_leaf_nodes=10, random_state=0)
+humidity_classifier.fit(X_train, y_train)
