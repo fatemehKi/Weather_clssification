@@ -50,4 +50,10 @@ type(humidity_classifier)
 ############# predicting the result
 predictions = humidity_classifier.predict(X_test)
 
+############comparison
+predictions[:10]
+
+############ measuring the accuracy of the model
+accuracy_score(y_true = y_test, y_pred = predictions)
+
 
