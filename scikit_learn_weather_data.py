@@ -56,3 +56,5 @@ y_test['high_humidity_label'][:10]
 
 ############ measuring the accuracy of the model
 accuracy_score(y_true = y_test, y_pred = predictions)
+
+
