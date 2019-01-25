@@ -21,3 +21,5 @@ print(before_rows)
 data = data.dropna()
 after_rows = data.shape[0]
 print(after_rows)
+
+
